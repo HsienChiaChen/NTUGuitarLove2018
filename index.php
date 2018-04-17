@@ -11,7 +11,7 @@
     <meta property="og:type" content="Website" />
     <meta property="og:url" content="index.html" />
     <meta property="og:image" content="images/meta-img.jpg" />
-    <meta property="og:description" content="【傳情週：5/07 - 5/11， 網路點歌：4/20 - 5/03】說不出口的話好多，既然巧克力、琉璃、棉花糖都可以用來傳情，這一次就讓我們用一首歌曲傳達你的心意！" />
+    <meta property="og:description" content="【傳情週：5/07 - 5/11， 網路點歌：4/20 - 5/03】說不出口的那些話，就用歌聲與和弦傳達給他.她吧！" />
     <meta property="og:site_name" content="台大吉他社105級 民歌傳琴" />
     <meta property='article:author' content='https://www.facebook.com/ntuguitarlove' />
 
@@ -266,16 +266,16 @@ $ans = json_encode($stock);
                 
                 <iframe id="VideoClipIframe" src="VideoClip.html" frameborder="no" scrolling="no" width="100%" height="100%"></iframe>
                 <div style="display: none">
-                    <a class="swipebox-video type0" rel="youtube" href="https://www.youtube.com/watch?v=bGjSnenJ0ms"></a>
-                    <a class="swipebox-video type1" rel="youtube" href="https://www.youtube.com/watch?v=NcsVUFr3c_Y"></a>
-                    <a class="swipebox-video type2" rel="youtube" href="https://www.youtube.com/watch?v=VwcOBoFwSqM"></a>
-                    <a class="swipebox-video type3" rel="youtube" href="https://www.youtube.com/watch?v=qP5FYxl8ZK0"></a>
-                    <a class="swipebox-video type4" rel="youtube" href="https://www.youtube.com/watch?v=1VWF7bT3fwg"></a>
-                    <a class="swipebox-video type5" rel="youtube" href="https://www.youtube.com/watch?v=oVqAVEZHaZQ"></a>
-                    <a class="swipebox-video type6" rel="youtube" href="https://www.youtube.com/watch?v=tQcXNqfNjRM"></a>
-                    <a class="swipebox-video type7" rel="youtube" href="https://www.youtube.com/watch?v=l9FuQlpJAjQ"></a>
-                    <a class="swipebox-video type8" rel="youtube" href="https://www.youtube.com/watch?v=AB0viiHpcmY"></a>
-                    <a class="swipebox-video type9" rel="youtube" href="https://www.youtube.com/watch?v=kw0qERw02mg"></a>
+                    <a class="swipebox-video type0" rel="youtube" href="https://www.youtube.com/watch?v=F8bBS6y9Otk"></a>
+                    <a class="swipebox-video type1" rel="youtube" href="https://www.youtube.com/watch?v=JaU4HHQJdik"></a>
+                    <a class="swipebox-video type2" rel="youtube" href="https://www.youtube.com/watch?v=0rUGN-x5Zqw"></a>
+                    <a class="swipebox-video type3" rel="youtube" href="https://www.youtube.com/watch?v=GxjbyVi-ECQ"></a>
+                    <a class="swipebox-video type4" rel="youtube" href="https://www.youtube.com/watch?v=X1U-9qvShsI"></a>
+                    <a class="swipebox-video type5" rel="youtube" href="https://www.youtube.com/watch?v=C9SIR6c6nKc"></a>
+                    <a class="swipebox-video type6" rel="youtube" href="https://www.youtube.com/watch?v=XkeJJgGqFAk"></a>
+                    <a class="swipebox-video type7" rel="youtube" href="https://www.youtube.com/watch?v=jXVQHxVd9-E"></a>
+                    <a class="swipebox-video type8" rel="youtube" href="https://www.youtube.com/watch?v=TZOpgMKPLJU"></a>
+                    <a class="swipebox-video type9" rel="youtube" href="https://www.youtube.com/watch?v=RhPBC9CH5NA"></a>
                 </div>
             </section>
         </article>
