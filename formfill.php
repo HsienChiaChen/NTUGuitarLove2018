@@ -20,8 +20,9 @@
         //}
         $(document).ready(function () {
             //alert('2018民歌傳情選歌已結束！謝謝您\n\n2018台大吉他社民歌傳情'); window.history.back();
-            //return;
-            alert('注意：表單提交之前，本時段依然開放其他人選歌，請盡速填寫以免他人搶先！');
+            alert('訂單系統尚在趕工中，請利用暫時替代方案的google表單\n詳細資訊請洽「台大吉他社˙民歌傳情」粉專貼文\n造成不便敬請見諒'); window.history.back();
+            return;
+            //alert('注意：表單提交之前，本時段依然開放其他人選歌，請盡速填寫以免他人搶先！');
         });
         function SubmitConfirm() {
             var isValid = Page_ClientValidate();

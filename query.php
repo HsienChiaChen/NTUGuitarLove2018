@@ -104,7 +104,7 @@ return true;
         </div>
 
         <div class="row" style="margin: 0 1em">
-            <h1 class="col-sm-12">選歌查詢</h1>
+            <h1 class="col-sm-12">選歌查詢(暫不開放)</h1>
             <div class="panel panel-primary col-sm-6" style="margin-left: 15px; padding: 0">
                 <div class="panel-heading">
                     <h2 class="panel-title">請輸入姓名及手機</h2>
