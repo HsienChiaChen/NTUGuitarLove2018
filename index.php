@@ -103,17 +103,18 @@ $conn->close();*/
 <?php
 header('Content-Type: text/html;charset=UTF-8');
 $host="localhost"; //MySQL 主機位址
-$username="root"; //MySQL 使用者名稱
-$password=""; //MySQL 使用者密碼
+$username="Leo"; //MySQL 使用者名稱
+$password="leo826826"; //MySQL 使用者密碼
 $database="team"; //資料庫名稱
-$conn=mysql_connect($host, $username, $password); //建立連線
+$conn=mysql_connect($host, $username,$password) or die("no connect"); //建立連線
 mysql_query("SET NAMES 'utf8'"); //設定查詢所用之字元集為 utf-8
-mysql_select_db($database, $conn); //開啟資料庫
+mysql_select_db($database, $conn) or die("false on connecting db"); //開啟資料庫
 $SQL="SELECT * FROM `teamlist`"; 
 $result=mysql_query($SQL, $conn); //執行 SQL 指令
+if(!$result) die("index invalid query:".mysql_error());
 //echo mysql_fetch_assoc($result)["player1"];
 $stock=array(); 
-for ($i=0; $i<mysql_numrows($result); $i++) { //走訪紀錄集 (列)
+for ($i=0; $i<mysql_num_rows($result); $i++) { //走訪紀錄集 (列)
      $row=mysql_fetch_assoc($result); //取得列陣列
      $stock_name=$row["Team"];
      $stock_id=$row["TID"];
