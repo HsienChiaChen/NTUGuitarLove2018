@@ -277,7 +277,7 @@ function submitConfirm(SongText, TeamText, DateText, ClassText, CategoryText, So
 function do_Post(params) {
     var form = document.createElement("form");
     form.setAttribute("method", "post");
-    form.setAttribute("action", "/formfill");
+    form.setAttribute("action", "/formfill.php");  //modify
 
     for (var key in params) {
         if (params.hasOwnProperty(key)) {

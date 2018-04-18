@@ -21,7 +21,7 @@ function OpenInfoModal(rid, name, phone) {
         success: function (response) {
             $('#date').text(DateString[response.Date - '1']);
             $('#class').text(ClassString[response.Class - '2']);
-            $('#teammembarname').text(response.TeamMemberName);
+            $('#teammembername').text(response.TeamMemberName);   //modify from teammembarname to teammembername
             $('#songname').text(response.SongName);
             var CategoryText = '';
             for (var i = 0; i < response.Category.length; i++) {
