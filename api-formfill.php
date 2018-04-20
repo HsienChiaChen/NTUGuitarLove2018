@@ -1,9 +1,9 @@
 <?php
 header('Content-Type: text/html;charset=UTF-8');
 $host="localhost"; //MySQL 主機位址
-$username="root"; //MySQL 使用者名稱
-$password=""; //MySQL 使用者密碼
-$database="team"; //資料庫名稱 team
+$username="Leo"; //MySQL 使用者名稱
+$password="leo826826"; //MySQL 使用者密碼
+$database="team"; //資料庫名稱
 $conn=mysql_connect($host, $username, $password); //建立連線
 mysql_query("SET NAMES 'utf8'"); //設定查詢所用之字元集為 utf-8
 mysql_select_db($database, $conn); //開啟資料庫
