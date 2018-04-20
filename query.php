@@ -82,14 +82,14 @@ return true;
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>&nbsp;選歌&nbsp;<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="time.html"><i class="fa fa-clock-o"></i>&nbsp;時段選歌</a></li>
-                                <li><a href="category.html"><i class="fa fa-sitemap"></i>&nbsp;分類選歌</a></li>
-                                <li><a href="team.html"><i class="fa fa-music"></i>&nbsp;歌手選歌</a></li>
+                                <li><a href="time.php"><i class="fa fa-clock-o"></i>&nbsp;時段選歌</a></li>
+                                <li><a href="category.php"><i class="fa fa-sitemap"></i>&nbsp;分類選歌</a></li>
+                                <li><a href="team.php"><i class="fa fa-music"></i>&nbsp;歌手選歌</a></li>
                                 <li class="divider"></li>
-                                <li><a href="query.html"><i class="fa fa-book"></i>&nbsp;選歌查詢</a></li>
+                                <li><a href="query.php"><i class="fa fa-book"></i>&nbsp;選歌查詢</a></li>
                             </ul>
                         </li>
-                        <li><a href="index.html"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                        <li><a href="index.php"><i class="fa fa-home"></i>&nbsp;Home</a></li>
                         
                     </ul>
                 </div>
