@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -19,10 +17,9 @@
         //    return false;
         //}
         $(document).ready(function () {
-            //alert('2018民歌傳情選歌已結束！謝謝您\n\n2018台大吉他社民歌傳情'); window.history.back();
-            alert('訂單系統尚在趕工中，請利用暫時替代方案的google表單\n詳細資訊請洽「台大吉他社˙民歌傳情」粉專貼文\n造成不便敬請見諒'); window.history.back();
-            return;
-            //alert('注意：表單提交之前，本時段依然開放其他人選歌，請盡速填寫以免他人搶先！');
+            //alert('2018民歌傳情選歌已結束！謝謝您\n\n2018台大吉他社民歌傳情'); window.history.back();//alert('訂單系統尚在趕工中，請利用暫時替代方案的google表單\n詳細資訊請洽「台大吉他社˙民歌傳情」粉專貼文\n造成不便敬請見諒'); window.history.back();
+            //return;
+            alert('注意：表單提交之前，本時段依然開放其他人選歌，請盡速填寫以免他人搶先！');
         });
         function SubmitConfirm() {
             var isValid = Page_ClientValidate();
@@ -51,7 +48,7 @@
     </style>
 </head>
 <body>
-    <form method="post" action="http://love.ntuguitar.com/formfill" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+    <form method="post" action="confirm.php" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
 <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
@@ -149,6 +146,17 @@ return true;
                     <p class="list-group-item"><strong>傳情歌手：</strong><span id="TeamLabel"><?php echo $_POST["Team"]; ?></span></p>
                     <p class="list-group-item"><strong>歌曲分類：</strong><span id="CategoryLabel"><?php echo $_POST["Date"]; ?></span></p>
                 </div>
+				<div style="display:none">
+					<input name="date" type="text" maxlength="40" id="PlaceTextBox1" value=<?php echo $_POST["date"]; ?> />
+					<input name="lesson" type="text" maxlength="40" id="PlaceTextBox2" value=<?php echo $_POST["lesson"]; ?> />
+					<input name="tid" type="text" maxlength="40" id="PlaceTextBox3" value=<?php echo $_POST["tid"]; ?> />
+					<input name="DateLabel" type="text" maxlength="40" id="PlaceTextBox1" value="<?php echo $_POST["Date"]; ?>" />
+					<input name="ClassLabel" type="text" maxlength="40" id="PlaceTextBox2" value="<?php echo $_POST["Class"]; ?>" />
+					<input name="SongLabel" type="text" maxlength="40" id="PlaceTextBox3" value="<?php echo $_POST["Song"]; ?>" />
+					<input name="TeamLabel" type="text" maxlength="40" id="PlaceTextBox4" value="<?php echo $_POST["Team"]; ?>" />
+					<input name="CategoryLabel" type="text" maxlength="40" id="PlaceTextBox5" value="<?php echo $_POST["Category"]; ?>" />
+				</div>
+				
 
                 <div class="panel panel-success" style="padding: 0;">
                     <div class="panel-heading">
@@ -179,9 +187,9 @@ return true;
                             <div class="form-group col-sm-12">
                                 <label>是否為通識課<span style="color: #FF0000; font-weight: bolder;">*</span>：</label>
                                 <select name="GeneralLessonDropDownList" id="GeneralLessonDropDownList" class="form-control">
-	<option value="1">是</option>
-	<option value="0">否</option>
-	<option selected="selected" value="2">不知道</option>
+	<option value="是">是</option> <!--1-->
+	<option value="否">否</option>
+	<option selected="selected" value="不知道">不知道</option>
 
 </select>
                             </div>
@@ -294,11 +302,11 @@ return true;
                             <div class="form-group col-sm-12">
                                 <label>前往攤位繳費時間<span style="color: #FF0000; font-weight: bolder;">*</span>：</label>
                                 <select name="PayDayDropDownList" id="PayDayDropDownList" class="form-control">
-	<option value="1">4/30(一)</option>
-	<option value="2">5/1(二)</option>
-	<option value="3">5/2(三)</option>
-	<option value="4">5/3(四)</option>
-	<option selected="selected" value="5">5/4(五)(14:30前)</option>
+	<option selected="selected" value="4/30(一)(14:30前)">4/30(一)(14:30前)</option>
+	<option selected="selected" value="5/1(二)(14:30前)">5/1(二)(14:30前)</option>
+	<option selected="selected" value="5/2(三)(14:30前)">5/2(三)(14:30前)</option>
+	<option selected="selected" value="5/3(四)(14:30前)">5/3(四)(14:30前)</option>
+	<option selected="selected" value="5/4(五)(14:30前)">5/4(五)(14:30前)</option>
 
 </select>
                             </div>
@@ -350,7 +358,7 @@ return true;
                 </div>
             </div>
             <div class="col-sm-12" style="text-align: right;">
-                <input type="submit" name="SubmitButton" value="送出表單" onclick="return SubmitConfirm();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;SubmitButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="SubmitButton" class="btn btn-success" />
+                <input type="submit" name="SubmitButton" value="送出表單" onclick="return SubmitConfirm();" id="SubmitButton" class="btn btn-success" />
             </div>
         </div>
         <!--footer-->

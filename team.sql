@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機: 127.0.0.1
--- 產生時間： 2018-04-18 08:42:49
+-- 產生時間： 2018-04-20 14:55:11
 -- 伺服器版本: 10.1.25-MariaDB
 -- PHP 版本： 5.6.31
 
@@ -21,6 +21,36 @@ SET time_zone = "+00:00";
 --
 -- 資料庫： `team`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `responselist`
+--
+
+CREATE TABLE `responselist` (
+  `RID` int(11) NOT NULL,
+  `Date` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Class` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `TeamMemberName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SongName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Category` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Place` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `ClassName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `GeneralLesson` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `DepartGrade` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Phone` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SentName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SentDepartGrade` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SentPhone` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SentEmail` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `PayDay` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SpecialRequest` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `Remark` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `Ispaid` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -90,6 +120,12 @@ INSERT INTO `teamlist` (`TID`, `Team`, `TeamDetail`, `SongName`, `OriginalPlayer
 --
 -- 已匯出資料表的索引
 --
+
+--
+-- 資料表索引 `responselist`
+--
+ALTER TABLE `responselist`
+  ADD PRIMARY KEY (`RID`);
 
 --
 -- 資料表索引 `teamlist`

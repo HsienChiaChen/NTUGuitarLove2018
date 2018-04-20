@@ -46,7 +46,7 @@ var CategoryStyle = ["primary", "danger", "warning", "success", "info"];
 			  h42.appendTo(div7);
 		  }
 	)
-	var button1 = $('<button></button>').addClass('btn btn-primary btn-md timetable').on('click' , function(){return OpenTimeModel(SongName , Team , '愛情' , SongID , TID)}).text('時間表');
+	var button1 = $('<button></button>').addClass('btn btn-primary btn-md timetable').on('click' , function(){return OpenTimeModel(SongName , Team , Category_str , SongID , TID)}).text('時間表');
 	
 	div1.appendTo(div0);
 	div2.appendTo(div1);
@@ -269,7 +269,7 @@ $(document).ready(function () {
 function submitConfirm(SongText, TeamText, DateText, ClassText, CategoryText, Song, Team, Date, Class) {
     var r = confirm("確定選歌?\n歌名：" + SongText + "\n歌手：" + TeamText + "\n日期：" + DateText + "\n時間：" + ClassText + "\n類型：" + CategoryText);
     if (r == true) {
-        do_Post({ 'Date': Date, 'Class': Class, 'Team': Team, 'Song': Song });
+        do_Post({ 'Date': DateText, 'Class': ClassText, 'Team': TeamText, 'Song': SongText , 'Category' : CategoryText , 'tid' : Team , 'date' : Date , 'lesson' : Class});
     }
     return false;
 }
