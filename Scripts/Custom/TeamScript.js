@@ -116,7 +116,7 @@ function OpenTeamModal(tid, team, teamDetail, ratio, imageCount) {
             $('#TeamDetailDiv .carousel-inner').empty();
             for (i = 0; i < imageCount; i++) {
                 $('<li></li>').addClass('item' + i).appendTo($('#TeamDetailDiv .carousel-indicators'));
-                $('<div></div>').addClass('item').append($('<img/>').attr('src', '/images/players/' + tid + '-' + (i + 1) + '.jpg')).appendTo($('#TeamDetailDiv .carousel-inner'));
+                $('<div></div>').addClass('item').append($('<img/>').attr('src', '/images/Players/' + tid + '-' + (i + 1) + '.jpg')).appendTo($('#TeamDetailDiv .carousel-inner'));
             }
             $('#TeamDetailDiv .carousel-indicators').find('li').first().addClass('active');
             $('#TeamDetailDiv .carousel-inner').find('div').first().addClass('active');
