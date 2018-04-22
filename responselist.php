@@ -1,5 +1,5 @@
 <?php
-mysql_connect("localhost","root","");
+mysql_connect("localhost","Leo","leo826826");
 mysql_select_db("team");
 mysql_query("set names utf8");
 
