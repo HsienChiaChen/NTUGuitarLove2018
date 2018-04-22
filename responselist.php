@@ -58,7 +58,7 @@ mysql_query("set names utf8");
 				$count = 0;
 				$rs = mysql_fetch_row($data);
 			
-				while($rs != "" and $count < 30){
+				while($rs != ""){
 					echo "<tr>
 						<td>$rs[0]</td>
 						<td>$rs[1]</td>
