@@ -27,7 +27,6 @@ mysql_query("set names utf8");
 			
 			$sql = "select * from `responselist` where 1" ;
 			$data = mysql_query($sql);
-			$rs = mysql_fetch_row($data);
 			$result = mysql_num_rows($data);
 			echo "以下共 $result 筆訂單<br>";
 			if(mysql_num_rows($data) > 0){
