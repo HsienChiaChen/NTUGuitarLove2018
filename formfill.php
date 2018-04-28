@@ -166,7 +166,7 @@ return true;
                         <div class="row">
                             <div class="form-group col-sm-12">
                                 <label>
-                                    傳情地點(ex.普通102)<span style="color: #FF0000; font-weight: bolder;">*</span>：
+                                    傳情地點(限校總區 ex.普通102)<span style="color: #FF0000; font-weight: bolder;">*</span>：
                                 </label>
                                 <a class="label label-primary" href="https://nol.ntu.edu.tw/" target="_blank"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;台大課程網</a>
                                 <span id="ctl11" class="label label-danger" style="display:none;">請輸入傳情地點</span>
