@@ -1,5 +1,5 @@
 <?php
-mysql_connect("localhost","Leo","leo826826");
+mysql_connect("localhost","root","");
 mysql_select_db("team");
 mysql_query("set names utf8");
 
@@ -24,10 +24,16 @@ mysql_query("set names utf8");
 		
 	
 		<br>
-		為保障傳情人隱私，不顯示被傳情人(到卡片信封區填寫)。<br>
-		請輸入「訂單編號」按確認繳費。<br><br> <!-- br代表換行 -->
+		Step 1. 先輸入姓名查詢訂單<br>
+		Step 2. 幹部填寫傳情紙資訊  (寫有「填寫」的欄位！！！)<br>
+		Step 3. 輸入「訂單編號」按確認繳費。
+		若訂單不在資料庫裡，請訂單人重填表單：https://ppt.cc/fxhYmx <br>
+		<br><br> <!-- br代表換行 -->
 		
 		<form method="POST" action="staffpay.php">   <!-- 訊息輸入框 -->
+			姓名查詢  :  <input type="text" name="nn">  <!-- name用來當作之後變數的使用 -->
+			<input type="submit" value="姓名查詢">
+			<br><br>
 			訂單編號  :  <input type="text" name="rr">  <!-- name用來當作之後變數的使用 -->
 			<input type="submit" value="確定繳費">
 			<br><br>
@@ -42,7 +48,8 @@ mysql_query("set names utf8");
 		<br>
 		<?php
 			$FindR = isset($_POST['rr']) ? $_POST['rr'] : ''; #如果有輸入值，則把輸入的值存到變數rr
-			$FindQ = isset($_POST['qq']) ? $_POST['qq'] : ''; #如果有輸入值，則把輸入的值存到變數rr
+			$FindQ = isset($_POST['qq']) ? $_POST['qq'] : ''; #如果有輸入值，則把輸入的值存到變數qq
+			$FindN = isset($_POST['qq']) ? $_POST['nn'] : ''; #如果有輸入值，則把輸入的值存到變數nn
 			
 			
 			if($FindR !== ""){
@@ -59,26 +66,42 @@ mysql_query("set names utf8");
 				echo "有資料為空值，請重新填寫";
 			}*/
 			
-			$sql = "select * from `responselist` where 1" ;
+			if($FindN !== "")
+			{
+				$sql = "select * from `responselist` where `Name` = '$FindN'" ;
+			}
+			else
+			{
+				$sql = "select * from `responselist` where 1" ;
+			}
+			
 			$data = mysql_query($sql);
 			$result = mysql_num_rows($data);
 			echo "以下共 $result 筆訂單<br>";
 			if(mysql_num_rows($data) > 0){
-				echo "<table border = '1' width=2500>";
+				echo "<table border = '1' width=4000>";
 				echo "<tr>
 						<td>訂單編號</td>
 						<td>繳費與否</td>
-						<td>日期</td>
-						<td>節次</td>
-						<td>歌手</td>
-						<td>歌曲</td>
-						<td>傳情地點</td>
-						<td>課堂名稱</td>
+						<td>日期(填寫)</td>
+						<td>節次(填寫)</td>
+						<td>歌手(填寫)</td>
+						<td>歌曲(填寫)</td>
+						<td>分類</td>
+						<td>傳情地點(填寫)</td>
+						<td>課堂名稱(填寫)</td>
 						<td>是否為通識</td>
-						<td>傳情人姓名</td>
-						<td>傳情人手機</td>
-						<td>特殊需求</td>
-						<td>備註</td>
+						<td>傳情人姓名<br>(匿名則勾匿名，但聯絡方式要寫)</td>
+						<td>傳情人系級</td>
+						<td>傳情人手機(填寫)</td>
+						<td>傳情人E-mail</td>
+						<td>被傳情人姓名(填寫)</td>
+						<td>被傳情人系級</td>
+						<td>被傳情人手機(若有則填寫)</td>
+						<td>被傳情人E-mail</td>
+						<td>繳費日期</td>
+						<td>特殊需求(在空白處寫)</td>
+						<td>備註(填寫)</td>
 						
 					</tr>";
 				$count = 0;
@@ -92,11 +115,19 @@ mysql_query("set names utf8");
 						<td>$rs[2]</td>
 						<td>$rs[3]</td>
 						<td>$rs[4]</td>
+						<td>$rs[5]</td>
 						<td>$rs[6]</td>
 						<td>$rs[7]</td>
 						<td>$rs[8]</td>
 						<td>$rs[9]</td>
+						<td>$rs[10]</td>
 						<td>$rs[11]</td>
+						<td>$rs[12]</td>
+						<td>$rs[13]</td>
+						<td>$rs[14]</td>
+						<td>$rs[15]</td>
+						<td>$rs[16]</td>
+						<td>$rs[17]</td>
 						<td>$rs[18]</td>
 						<td>$rs[19]</td>
 						
@@ -105,8 +136,6 @@ mysql_query("set names utf8");
 				}
 				echo "</table>";
 			}	
-			echo "<br>";
-			
 			//mysql_close($conn);
 			
 			echo "<br>";
